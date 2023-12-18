@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔法の森の迷宮：幻惑と時空の試練</title>
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- メイン選択肢 -->
+    <main>
+        <div class="opening_area" id="openingArea">
+            <h1>魔法の森の迷宮：幻惑と時空の試練</h1>
+            <h2>written by chatGPT</h2>
+            <button class="button start_button" id="start_button" onclick="startButton()">冒険に出る</button>
+        </div>    
+    
+        <div class="choice_area" id="mainChoiceArea">
+            <h2 id="choice"></h2>
+            <p id="choiceParagraph"></p>
+            <h3 id="choiceA"></h3>
+            <p id="choiceA_sup"></p>
+            <h3 id="choiceB"></h3>
+            <p id="choiceB_sup"></p>
+            <h3 id="choiceC"></h3>
+            <p id="choiceC_sup"></p>
+            <div class="button_box">
+                <button class="button choice_button" onclick="ansButton(0)" id="ansButton1">選択肢A</button>
+                <button class="button choice_button" onclick="ansButton(1)" id="ansButton2">選択肢B</button>
+                <button class="button choice_button" onclick="ansButton(2)" id="ansButton3">選択肢C</button>
+            </div>
+        </div>
+
+        <!-- 正解したときのクッション -->
+        <div class="correct_area" id="mainCorrectArea">
+            <h2>正解！</h2>
+            <p id="correctParagraph">aaaa</p>
+            <div class="button_box">
+                <button class="button" onclick="correctButton()" id="nextButton">次へ</button>
+            </div>
+        </div>
+        
+        <!-- ゲームオーバーかエンディング -->
+        <div class="ending_area" id="endingArea">
+            <h2 id="endingName">エンディング名</h2>
+            <p id="endingParagraph"></p>
+            <div class="button_box">
+                <button class="button" id="start_button" onclick="startButton()">リトライ</button>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
