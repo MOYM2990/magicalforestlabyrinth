@@ -68,10 +68,12 @@ main {
     transition: all 0.5s;
 }
 
-.button:hover {
-    transform: scale(1.1,1.1);
-    background-color:#fcc800;
-    color:#665a1a;
+@media screen and (min-width:768px) {
+    .button:hover {
+        transform: scale(1.1,1.1);
+        background-color:#fcc800;
+        color:#665a1a;
+    }
 }
 
 .start_button {
@@ -134,4 +136,22 @@ main {
 .correct_area {
     text-align: center;
     margin: 0;
+}
+
+@media screen and (max-width:768px) {
+
+    body {
+        height: 100%;
+    }
+
+    main {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .button {
+        display: inline-block;
+        width: 240px;
+        margin: 16px 0;
+    }
 }
